@@ -21,17 +21,22 @@ Project Motivation: Understanding the environmental conditions associated with m
 ## Headline of Press Release and link to separate markdown file containing the press release
 [Which Weather Conditions Lead to the Most Destructive Wildfires](./pressrelease.md)
 
-
-
 ## Domain exposition
+
+
 ## Terminology- table summarizing jargon, KPIs, etc. 
+
 ## Paragraph explaining the domain the project lives in
 ## Background reading Separate folder 
 ## Table - showing a summary of the readings, one row per item, includes title, brief description, and link to file in folder
 
 ## Data Creation
-## Paragraph or two explaining the raw data acquisition process (provenance).
+## Paragraph or two explaining the raw data acquisition process (provenance).
+The dataset used in my analysis is from the UCI Machine Learning Repository, specifically the Forest Fires dataset. This dataset contains observations of wildfire events in a forested region in Northeast Portugal, and includes spatial coordinates, temporal variables (month and day), environmental conditions (temperature, humidity, wind, and rain), and fire-related indices (FFMC, DMC, DC, ISI), along with the burned area. The data was downloaded from the UCI repository as a compressed ZIP file, which was then unzipped to extract the CSV file. After loading the dataset, I examined its structure briefly through excel and found that the dataset was already well-structured, limiting the need for any major preprocessing. The final dataset is organized as a single table, where each row represents an observation of wildfire conditions and the associated burned area.
+
 ## Code Table showing the code used to create the data, one row per file, with a brief description and link to code in repo
+
+
 ## Bias Identification description of how bias could be/was introduced in the data collection process
 ## Bias Mitigation description of how biases can be handled/quantified/accounted for in analysis
 ## Rationale for critical decisions, especially judgement calls, and places that can introduce/mitigate uncertainty
