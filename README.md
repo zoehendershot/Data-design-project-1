@@ -1,4 +1,4 @@
-[pressrelease.md](https://github.com/user-attachments/files/26388915/pressrelease.md)# DS 4320 Project 1: Wildfires
+# DS 4320 Project 1: Wildfires
 Executive Summary - Short paragraph explaining the contents of the respository in executive form
 Zoe Hendershot
 njd5rd
