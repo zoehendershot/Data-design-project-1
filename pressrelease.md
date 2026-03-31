@@ -19,4 +19,5 @@ The goal is to better understand when fires are more likely to become severe, he
 This chart highlights which environmental factors are most strongly associated with larger wildfires. Variables such as temperature, humidity, and drought-related indices appear to play the most significant role in predicting wildfire severity.
 
 <img width="757" height="554" alt="Screenshot 2026-03-31 at 4 44 21 PM" src="https://github.com/user-attachments/assets/1a399b68-ce69-4938-80a0-81da1a236180" />
+
 *this chart was generated as part of my analysis pipeline
