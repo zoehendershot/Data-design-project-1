@@ -12,11 +12,11 @@ This repository contains all materials for a data analysis project on wildfire r
 ### Press release - link
 [Which Weather Conditions Lead to the Most Destructive Wildfires](./pressrelease.md)
 ### link to data folder
-[Data Folder](https://myuva-my.sharepoint.com/:f:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data?csf=1&web=1&e=xwJJey)
+[Data Folder](https://github.com/zoehendershot/Data-design-project-1/blob/main/data_pipeline.ipynb)
 ### link to pipeline files
-[Data Pipeline Markdown File](https://myuva-my.sharepoint.com/:t:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/data_pipeline.md?csf=1&web=1&e=UcIwUC)
+[Data Pipeline Markdown File](https://github.com/zoehendershot/Data-design-project-1/blob/main/data_pipeline.md)
 
-[Data Pipeline Jupyter Notebook File](https://myuva-my.sharepoint.com/:u:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline%20(1).ipynb?csf=1&web=1&e=lJfBPR)
+[Data Pipeline Jupyter Notebook File](https://github.com/zoehendershot/Data-design-project-1/blob/main/data_pipeline.ipynb)
 
 ### License
 This project is licensed under the MIT License.  
