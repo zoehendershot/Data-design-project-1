@@ -1,4 +1,4 @@
-# DS 4320 Project 1: Wildfires
+# DS 4320 Project 1: Fueling the Fire
 ### Executive Summary
 This repository contains all materials for a data analysis project on wildfire risk using the UCI Forest Fires dataset. It includes the raw and processed data, a normalized relational database structure, and SQL queries used to prepare a modeling dataset. The repository also contains the full data pipeline implemented in Python and DuckDB, along with a Jupyter Notebook documenting the data cleaning, transformation, and analysis steps. Additionally, it includes a press release for a general audience, supporting documentation such as domain exposition and data dictionaries, and a license and DOI for reproducibility and citation.
 
