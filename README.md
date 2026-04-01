@@ -4,6 +4,7 @@ Zoe Hendershot
 njd5rd
 # Created DOI
 # Press release - link
+[Which Weather Conditions Lead to the Most Destructive Wildfires](./pressrelease.md)
 # link to data folder
 # link to pipeline files
 # License: State name of license here and link to the file in the top level of the repository (use normal GitHub conventions)
