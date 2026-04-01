@@ -23,7 +23,7 @@ See the LICENSE file for details:
 [LICENSE](https://github.com/zoehendershot/Data-design-project-1/blob/main/LICENSE)
 
 ## Problem Definition
-## State the initial general problem and refined specific problem statement
+### State the initial general problem and refined specific problem statement
 Initial General Problem: Wildfires are a growing environmental hazard that threaten ecosystems, human populations, and air quality, making it important to understand the conditions that influence their severity.
 
 Refined Specific Problem: This project investigates how variation in environmental and meteorological conditions, specifically temperature, relative humidity, wind speed, rainfall, and drought-related fire weather indices, are associated with differences in wildfire severity, measured by burned area. It aims to identify which combinations of these conditions are most strongly linked to larger, more severe wildfire events, and to better understand how these factors interact to influence the scale of fires.
@@ -32,11 +32,11 @@ Refinement Rationale: The initial problem of understanding wildfire behavior is 
 
 Project Motivation: Understanding the environmental conditions associated with more severe wildfires is important for improving risk assessment and informing prevention and response strategies. As climate patterns shift and extreme weather events become more frequent, identifying how factors such as temperature, humidity, wind, and drought conditions relate to wildfire severity can help highlight situations where fires are more likely to grow large and cause greater damage. Beyond its environmental relevance, this project also demonstrates how data can be used to study complex, real-world phenomena, where outcomes are influenced by many interacting factors and may not be easily predictable. By analyzing these relationships, the project contributes to a broader effort to better understand and manage wildfire risk.
 
-## Headline of Press Release and link to separate markdown file containing the press release
+### Press Release
 [Which Weather Conditions Lead to the Most Destructive Wildfires](./pressrelease.md)
 
-## Domain exposition                          
-## Terminology- table summarizing jargon, KPIs, etc. 
+## Domain Exposition                          
+### Terminology table
 | Term                           | Definition                                                                                       | Form of Measurement / KPI                                                                 |
 | ------------------------------ | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | Wildfire                       | An uncontrolled fire occurring in natural vegetation such as forests, grasslands, or shrublands. | Observed fire events recorded.                       |
@@ -49,13 +49,13 @@ Project Motivation: Understanding the environmental conditions associated with m
 | Wind Speed                     | The speed of wind that can influence fire spread.                                          | Measured in km/h from meteorological data.                                                |
 | Fire Weather Index System      | A widely used model that estimates wildfire danger using weather and fuel moisture indicators.   | Calculated from weather variables and fuel moisture codes.                                |
 
-## Paragraph explaining the domain the project lives in
+### Domain Explanation
 This project lies within the domain of environmental data science and wildfire prediction. Wildfires are complex natural events influenced by a wide range of environmental conditions. Researchers and environmental agencies use meteorological and ecological data to better understand the conditions that contribute to wildfire occurrence and severity. The Forest Fires dataset from the UCI Machine Learning Repository contains records of wildfire events in Montesinho Natural Park in Portugal along with weather conditions and drought indicators collected at the time of each fire. By analyzing relationships between environmental variables and burned area, researchers can identify patterns that may help improve wildfire risk assessment and environmental management strategies.
 
-## Background reading Separate folder 
+### Background Reading
 [Wildfires Background Reading Folder](https://myuva-my.sharepoint.com/:f:/g/personal/njd5rd_virginia_edu/IgBhyR_FLbvzR6G51Pql1TSYAfX7vFkfYp4B1Z-r_BDv9G4?e=Qnxodo)
 
-## Table - showing a summary of the readings, one row per item, includes title, brief description, and link to file in folder
+### Background Reading Summary Table
 | Title                                                                                            | Description                                                                                                                                        | File                                                   |
 | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | Prediction of Area Burned by Forest Fires Using Machine Learning Algorithms (Bhat et al., 2022)  | Research paper exploring how machine learning models can be used to predict wildfire burned area using environmental and meteorological variables. | `wildfires_background_reading/Bhat Forest Fire Prediction.url`  |
@@ -65,14 +65,14 @@ This project lies within the domain of environmental data science and wildfire p
 | Forest Fires Dataset: UCI Machine Learning Repository                                           | Official dataset documentation explaining the variables, structure, and collection process for the wildfire dataset used in this project.          | `wildfires_background_reading/Forest Fires UCI ML Repo.url`     |
 
 ## Data Creation
-## Paragraph or two explaining the raw data acquisition process (provenance).
+### Raw Data Acquisition Process (Provenance)
 The dataset used in my analysis is from the UCI Machine Learning Repository, specifically the Forest Fires dataset. This dataset contains observations of wildfire events in a forested region in Northeast Portugal, and includes spatial coordinates, temporal variables (month and day), environmental conditions (temperature, humidity, wind, and rain), and fire-related indices (FFMC, DMC, DC, ISI), along with the burned area. The data was downloaded from the UCI repository as a compressed ZIP file, which was then unzipped to extract the CSV file. After loading the dataset, I examined its structure briefly through excel and found that the dataset was already well-structured, limiting the need for any major preprocessing. The final dataset is organized as a single table, where each row represents an observation of wildfire conditions and the associated burned area.
 
 ## Code Table showing the code used to create the data, one row per file, with a brief description and link to code in repo
 
 | File Name             | Description                                                                 | Link |
 |-----------------------|-----------------------------------------------------------------------------|------|
-| loaddata.ipynb  | Loads the UCI Forest Fires dataset from CSV, performs basic cleaning, derives 2 new features for analysis, prints a brief summary of the dataset structure and missing values, and conducts a short analysis for verification. | [sample code](https://colab.research.google.com/drive/1mtre0p96ivqYwk1kIvuhLl5D5OhJ2grv?usp=sharing) |
+| loaddata.ipynb  | Loads the UCI Forest Fires dataset from CSV, performs basic cleaning, derives 2 new features for analysis, prints the data structure, and saves the file as a new CSV. | [Data Creation Code](https://colab.research.google.com/drive/1mtre0p96ivqYwk1kIvuhLl5D5OhJ2grv?usp=sharing) |
 
 ## Bias Identification description of how bias could be/was introduced in the data collection process
 Bias may be introduced into the Forest Fires dataset through several aspects of the data collection process. First, the dataset is limited to a specific geographic region (the Montesinho Natural Park in Portugal), which introduces a form of sampling bias. The environmental and wildfire patterns observed may not generalize to other regions with different climates or vegetation.
@@ -127,12 +127,13 @@ The dataset was normalized into relational tables to reduce redundancy and impro
 
 | Table Name | Description | Link |
 |-----------|------------|------|
-| `forestfires` | Original flat dataset containing all wildfire observations and variables prior to normalization | [forestfires.csv](link) |
-| `fires` | Main fact table containing one record per wildfire event, including foreign keys linking to location, time, weather, and fire index tables, along with burned area and log-transformed area | [fires.csv](link) |
-| `locations` | Lookup table containing spatial grid coordinates (`x`, `y`) for each unique fire location | [locations.csv](link) |
-| `time_info` | Lookup table containing temporal information for each fire event, including month, day, and derived season | [time_info.csv](link) |
-| `weather` | Lookup table containing meteorological conditions such as temperature, relative humidity, wind speed, and rainfall | [weather.csv](link) |
-| `fire_indices` | Lookup table containing fire weather index variables (FFMC, DMC, DC, ISI) that measure fuel and drought conditions | [fire_indices.csv](link) |
+| `originalforestfires` | Original flat dataset containing all wildfire observations and variables prior to normalization | [originalforestfires.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/originalforestfires.csv?d=w395bb838eaed4815a6dec8c6229cf7fb&csf=1&web=1&e=YXsJt9) |
+| `cleanedfulldataset` | Cleaned and fully prepared dataset with derived features (e.g., season, log_area) used for analysis and modeling | [cleanedfulldataset.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/cleanedfulldataset.csv?d=w638c066892744b53b66b15b40f4ac63c&csf=1&web=1&e=iEaAkf) |
+| `firestable` | Main fact table containing one record per wildfire event, including foreign keys linking to location, time, weather, and fire index tables, along with burned area and log-transformed area | [firestable.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/firestable.csv?d=wd8042f236f014b1c82c6a51ea374adf8&csf=1&web=1&e=uzBHVu) |
+| `locationstable` | Lookup table containing spatial grid coordinates (`x`, `y`) for each unique fire location | [locationstable.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/locationstable.csv?d=w9c300a3c2ca5468791bfcdbdff3d57ea&csf=1&web=1&e=mU4Ef8) |
+| `time_infotable` | Lookup table containing temporal information for each fire event, including month, day, and derived season | [time_infotable.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/time_infotable.csv?d=w4cccb5c5238b491c8ff4cfc04e19c175&csf=1&web=1&e=jbLTOI) |
+| `weathertable` | Lookup table containing meteorological conditions such as temperature, relative humidity, wind speed, and rainfall | [weathertable.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/weathertable.csv?d=w4c60129027b74f658d605e5ff6e17eb5&csf=1&web=1&e=HRiPRO) |
+| `fire_indicestable` | Lookup table containing fire weather index variables (FFMC, DMC, DC, ISI) that measure fuel and drought conditions | [fire_indicestable.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/fire_indicestable.csv?d=w8a05705a042a426db95d361e6ee6eb51&csf=1&web=1&e=aK1IVv) |
 
 ## Data Dictionary Table with one row per feature in the data set containing: name, data type, description, example
 
