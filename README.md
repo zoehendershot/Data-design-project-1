@@ -39,7 +39,7 @@ Project Motivation: Understanding the environmental conditions associated with m
 This project lies within the domain of environmental data science and wildfire prediction. Wildfires are complex natural events influenced by a wide range of environmental conditions. Researchers and environmental agencies use meteorological and ecological data to better understand the conditions that contribute to wildfire occurrence and severity. The Forest Fires dataset from the UCI Machine Learning Repository contains records of wildfire events in Montesinho Natural Park in Portugal along with weather conditions and drought indicators collected at the time of each fire. By analyzing relationships between environmental variables and burned area, researchers can identify patterns that may help improve wildfire risk assessment and environmental management strategies.
 
 ## Background reading Separate folder 
-[Wildfires Background Reading Folder](https://myuva-my.sharepoint.com/:f:/r/personal/njd5rd_virginia_edu/Documents/Wildfires%20Background%20Reading?csf=1&web=1&e=MYMob8)
+[Wildfires Background Reading Folder](https://myuva-my.sharepoint.com/:f:/g/personal/njd5rd_virginia_edu/IgBhyR_FLbvzR6G51Pql1TSYAfX7vFkfYp4B1Z-r_BDv9G4?e=Qnxodo)
 
 ## Table - showing a summary of the readings, one row per item, includes title, brief description, and link to file in folder
 | Title                                                                                            | Description                                                                                                                                        | File                                                   |
