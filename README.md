@@ -1,22 +1,23 @@
 # DS 4320 Project 1: Wildfires
-## Executive Summary: This repository contains all materials for a data analysis project on wildfire risk using the UCI Forest Fires dataset. It includes the raw and processed data, a normalized relational database structure, and SQL queries used to prepare a modeling dataset. The repository also contains the full data pipeline implemented in Python and DuckDB, along with a Jupyter Notebook documenting the data cleaning, transformation, and analysis steps. Additionally, it includes a press release for a general audience, supporting documentation such as domain exposition and data dictionaries, and a license and DOI for reproducibility and citation.
+### Executive Summary
+This repository contains all materials for a data analysis project on wildfire risk using the UCI Forest Fires dataset. It includes the raw and processed data, a normalized relational database structure, and SQL queries used to prepare a modeling dataset. The repository also contains the full data pipeline implemented in Python and DuckDB, along with a Jupyter Notebook documenting the data cleaning, transformation, and analysis steps. Additionally, it includes a press release for a general audience, supporting documentation such as domain exposition and data dictionaries, and a license and DOI for reproducibility and citation.
 
-Zoe Hendershot
+### Zoe Hendershot
 
-njd5rd
+### njd5rd
 
-# DOI
+### DOI
 [![DOI](https://zenodo.org/badge/1195707301.svg)](https://doi.org/10.5281/zenodo.19363213)
 
-# Press release - link
+### Press release - link
 [Which Weather Conditions Lead to the Most Destructive Wildfires](./pressrelease.md)
-# link to data folder
+### link to data folder
 [Data Folder](https://myuva-my.sharepoint.com/:f:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data?csf=1&web=1&e=xwJJey)
-# link to pipeline files
+### link to pipeline files
 [Data Pipeline Markdown File](https://myuva-my.sharepoint.com/:t:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline.md?csf=1&web=1&e=Ghl3sU)
 [Data Pipeline Jupyter Notebook File](https://myuva-my.sharepoint.com/:u:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline.ipynb?csf=1&web=1&e=haJye2)
 
-# License
+### License
 This project is licensed under the MIT License.  
 See the LICENSE file for details:  
 [LICENSE](https://github.com/zoehendershot/Data-design-project-1/blob/main/LICENSE)
