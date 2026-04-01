@@ -6,8 +6,15 @@ njd5rd
 # Press release - link
 [Which Weather Conditions Lead to the Most Destructive Wildfires](./pressrelease.md)
 # link to data folder
+[Data Folder](https://myuva-my.sharepoint.com/:f:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data?csf=1&web=1&e=xwJJey)
 # link to pipeline files
-# License: State name of license here and link to the file in the top level of the repository (use normal GitHub conventions)
+[Data Pipeline Markdown File](https://myuva-my.sharepoint.com/:t:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline.md?csf=1&web=1&e=Ghl3sU)
+[Data Pipeline Jupyter Notebook File](https://myuva-my.sharepoint.com/:u:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline.ipynb?csf=1&web=1&e=haJye2)
+
+# License
+This project is licensed under the MIT License.  
+See the LICENSE file for details:  
+[LICENSE](https://github.com/zoehendershot/Data-design-project-1/blob/main/LICENSE)
 
 ## Problem Definition
 ## State the initial general problem and refined specific problem statement
