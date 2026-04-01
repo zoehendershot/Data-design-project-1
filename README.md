@@ -14,8 +14,8 @@ This repository contains all materials for a data analysis project on wildfire r
 ### link to data folder
 [Data Folder](https://myuva-my.sharepoint.com/:f:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data?csf=1&web=1&e=xwJJey)
 ### link to pipeline files
-[Data Pipeline Markdown File](https://myuva-my.sharepoint.com/:t:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline.md?csf=1&web=1&e=Ghl3sU)
-[Data Pipeline Jupyter Notebook File](https://myuva-my.sharepoint.com/:u:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline.ipynb?csf=1&web=1&e=haJye2)
+[Data Pipeline Markdown File](https://myuva-my.sharepoint.com/:t:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/data_pipeline.md?csf=1&web=1&e=g77QwM)
+[Data Pipeline Jupyter Notebook File](https://myuva-my.sharepoint.com/:u:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Pipeline%20Files/datapipeline%20(1).ipynb?csf=1&web=1&e=lKSWGU)
 
 ### License
 This project is licensed under the MIT License.  
@@ -68,27 +68,27 @@ This project lies within the domain of environmental data science and wildfire p
 ### Raw Data Acquisition Process (Provenance)
 The dataset used in my analysis is from the UCI Machine Learning Repository, specifically the Forest Fires dataset. This dataset contains observations of wildfire events in a forested region in Northeast Portugal, and includes spatial coordinates, temporal variables (month and day), environmental conditions (temperature, humidity, wind, and rain), and fire-related indices (FFMC, DMC, DC, ISI), along with the burned area. The data was downloaded from the UCI repository as a compressed ZIP file, which was then unzipped to extract the CSV file. After loading the dataset, I examined its structure briefly through excel and found that the dataset was already well-structured, limiting the need for any major preprocessing. The final dataset is organized as a single table, where each row represents an observation of wildfire conditions and the associated burned area.
 
-## Code Table showing the code used to create the data, one row per file, with a brief description and link to code in repo
+### Code Table showing the code used to create the data, one row per file, with a brief description and link to code in repo
 
 | File Name             | Description                                                                 | Link |
 |-----------------------|-----------------------------------------------------------------------------|------|
 | loaddata.ipynb  | Loads the UCI Forest Fires dataset from CSV, performs basic cleaning, derives 2 new features for analysis, prints the data structure, and saves the file as a new CSV. | [Data Creation Code](https://colab.research.google.com/drive/1mtre0p96ivqYwk1kIvuhLl5D5OhJ2grv?usp=sharing) |
 
-## Bias Identification description of how bias could be/was introduced in the data collection process
+### Bias Identification description of how bias could be/was introduced in the data collection process
 Bias may be introduced into the Forest Fires dataset through several aspects of the data collection process. First, the dataset is limited to a specific geographic region (the Montesinho Natural Park in Portugal), which introduces a form of sampling bias. The environmental and wildfire patterns observed may not generalize to other regions with different climates or vegetation.
 
 Second, the dataset uses spatial coordinates (X and Y) based on a grid system rather than precise geographic latitude and longitude. This basically pixelates the data, where instead of capturing the exact location of each fire, observations are grouped into grid cells. This could possibly lead to multiple fires occurring in different parts of the same grid cell being treated as a single observation, which results in a loss of detail and obscurity of local variation.
 
 Lastly, there may be survivorship bias, as the dataset likely includes only recorded wildfire events. Smaller or less significant fires may be underrepresented, while larger or more impactful fires are more likely to be captured in the data.
 
-## Bias Mitigation description of how biases can be handled/quantified/accounted for in analysis
+### Bias Mitigation description of how biases can be handled/quantified/accounted for in analysis
 Each type of bias mentioned requires its own unique solution. To account for geographic sampling bias, conclusions should be limited to the Montesinho Natural Park region (or regions with very similar geographic features/climate) rather than generalized broadly. To generalize further, we would have to collect more data from other regions.
 
 To mitigate spatial resolution bias introduced by the grid-based (X and Y) system, analysis should focus on aggregated trends rather than precise location-based conclusions. For example, grouping observations by larger patterns (such as overall fire frequency or average burned area) helps reduce the impact of the “pixelation” effect and avoids overinterpreting small spatial differences.
 
 Finally, survivorship bias can be accounted for by acknowledging that the dataset may underrepresent smaller fires. Analyses should avoid assuming that the dataset reflects all wildfire activity and instead interpret results as representative of recorded events, which may skew toward larger or more easily detected fires. This is an example of bias that would have to be documented as a source of uncertainty.
 
-## Rationale for critical decisions, especially judgement calls, and places that can introduce/mitigate uncertainty
+### Rationale for critical decisions, especially judgement calls, and places that can introduce/mitigate uncertainty
 Several key decisions were made in selecting the Forest Fires dataset for my analysis. I chose to use the dataset without attempting to alter or correct inherent limitations. Certain characteristics are fundamental to how the data was collected and cannot be meaningfully reconstructed at a finer level of detail without redesign the collecting process and starting from scratch.
 
 The survivorship bias specifically presents a limitation that cannot be directly corrected. Rather than attempting to adjust for this, the approach I have decided to take is to explicitly acknowledge this limitation and interpret results as reflecting observed and recorded fires, rather than all fire activity. Transparency is key to moving forward even when the data may have inherent bias.
@@ -97,7 +97,7 @@ Similarly, the use of grid-based coordinates introduces uncertainty by obscuring
 
 ## Metadata
 
-## Schema ER diagram at the logical level 
+### Schema ER diagram at the logical level 
 ```
 +--------------------------------------------------+
 |               forestfiresdataset                |
@@ -121,9 +121,9 @@ Similarly, the use of grid-based coordinates introduces uncertainty by obscuring
 +--------------------------------------------------+
 ```
 
-## Data Table listing all of the tables in the dataset, one line per table, brief description and link to csv file
+### Data Tables
 
-The dataset was normalized into relational tables to reduce redundancy and improve organization, with each table representing a distinct component of wildfire data. The original dataset is also included for reference.
+The dataset was normalized into relational tables with each table representing a distinct component of wildfire data. The original dataset and cleaned dataset are also included for reference.
 
 | Table Name | Description | Link |
 |-----------|------------|------|
@@ -135,7 +135,7 @@ The dataset was normalized into relational tables to reduce redundancy and impro
 | `weathertable` | Lookup table containing meteorological conditions such as temperature, relative humidity, wind speed, and rainfall | [weathertable.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/weathertable.csv?d=w4c60129027b74f658d605e5ff6e17eb5&csf=1&web=1&e=HRiPRO) |
 | `fire_indicestable` | Lookup table containing fire weather index variables (FFMC, DMC, DC, ISI) that measure fuel and drought conditions | [fire_indicestable.csv](https://myuva-my.sharepoint.com/:x:/r/personal/njd5rd_virginia_edu/Documents/Data%20Design%20Project%201/Project%20Data/fire_indicestable.csv?d=w8a05705a042a426db95d361e6ee6eb51&csf=1&web=1&e=aK1IVv) |
 
-## Data Dictionary Table with one row per feature in the data set containing: name, data type, description, example
+### Data Dictionary Table 
 
 | Variable Name | Data Type | Description                                                                 | Example |
 |---------------|----------|-----------------------------------------------------------------------------|---------|
@@ -157,7 +157,7 @@ The dataset was normalized into relational tables to reduce redundancy and impro
 | log_area      | float    | Log-transformed burned area to reduce right skew and stabilize variance     | 2.6     |
 
 
-## Data Dictionary quantification of uncertainty for numerical features
+## Quantification of uncertainty for numerical features
 
 | Variable | Data Type | Uncertainty Metric |
 |----------|----------|--------------------------------|
