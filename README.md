@@ -2,7 +2,9 @@
 Executive Summary - Short paragraph explaining the contents of the respository in executive form
 Zoe Hendershot
 njd5rd
-# Created DOI
+# DOI
+[![DOI](https://zenodo.org/badge/1195707301.svg)](https://doi.org/10.5281/zenodo.19363213)
+
 # Press release - link
 [Which Weather Conditions Lead to the Most Destructive Wildfires](./pressrelease.md)
 # link to data folder
